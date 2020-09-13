@@ -1,1 +1,78 @@
-hello world
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Flask Tutorial</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/template.css') }}">
+
+  </head>
+  <body>
+      <header>
+          <nav>
+            <div id="mySidepanel" class="sidepanel">
+            <a href="#sect1">About</a>
+            <a href="#sect2">Articles</a>
+            <a href="#sect3">Services</a>
+            <a href="#sect4">Contacts</a>
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            </div>
+          </nav>
+      </header>
+    <nav>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">^</button>
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+        </script>
+
+
+    <div class="menu_mirai">
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <div class="text_menu_mirai">
+          <h1 id="mirai_text"> M I R A I _ </h1>
+        </div>
+    </div>
+        <script>
+          function openNav() {
+            document.getElementById("mySidepanel").style.width = "250px";
+          }
+          function closeNav() {
+            document.getElementById("mySidepanel").style.width = "0";
+          }
+        </script>
+    </nav>
+
+    <div id="sect1">
+        <img class="center-fit" src="static/images/macaco_apensar_dev1_eng.png">
+    </div>
+    <div id="sect2">
+        <img class="center-fit" src="static/images/macaco_preto.png">
+    </div>
+    <div id="sect3">
+        <img class="center-fit" src="static/images/macaco_apensar_dev3_eng.png">
+    </div>
+    <div id="sect4">
+        <img class="center-fit" src="static/images/macaco_preto.png">
+    </div>
+
+  </body>
+<footer id="footer">this is my footer</footer>
+</html>
